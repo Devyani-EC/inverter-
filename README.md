@@ -35,3 +35,4 @@ HERE IS THE IMAGE:
 ##symbol
 > Now I create a symbol file by pressing "A" on the keyboard, in that file I create a visual representation of the inverter.
 > HERE IS IT :
+![image](https://github.com/Devyani-EC/inverter-/commit/ef2a019d14b763fa7327d418fd28dd1457323953#diff-c06faeada9d0f665ff37cb2994fe91ad17506e3a7d15514ffacc90aa30e2ed0a)
