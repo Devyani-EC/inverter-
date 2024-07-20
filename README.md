@@ -25,14 +25,14 @@ Key Skills Demonstrated :
   - [2.3 Power analysis](#23-power-analysis)
 - [3. layout](#2-layout)
 ---
-##schematic 
+## 1. schematic 
 >My project starts with a schematic.		
 >>I take nfet_01v8 and pfet_01v8 and connect their gate, drain, and source with i/p & o/p pins,name pins correctly.
 
 HERE IS THE IMAGE:
 ![image](https://github.com/Devyani-EC/inverter-/blob/main/Screenshot%20(41).png)
 ---
-##symbol
+## symbol
 > Now I create a symbol file by pressing "A" on the keyboard, in that file I create a visual representation of the inverter.
 
   #IMPORTANCE:
