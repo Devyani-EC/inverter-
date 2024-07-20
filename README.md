@@ -21,8 +21,9 @@ Key Skills Demonstrated :
   - [1.2 testbench](#12-testbench)
 - [2. Analysis of INVERTER models](#2-Analysis-of-INVERTER-models)
   - [2.1 General VTC analysis](#21-General-VTC-analysis)
-  - [2.2 delay analysis ](#22-delay-analysis)
-  - [2.3 Power analysis](#23-power-analysis)
+  - [2.2 noise margin ](#22-noise-margin)
+  - [2.3 delay analysis ](#22-delay-analysis)
+  - [2.4 Power analysis](#23-power-analysis)
 - [3. layout](#2-layout)
 ---
 ## 1. schematic 
@@ -78,7 +79,35 @@ here vdd is 1.8 which is max, therefore vm should be 0.9. if there is too much d
 
 now I am proving the theory of "VM" THAT if I increase "VM" then the graph should shift right.
 ### for WIDTH(P)=2.5
-![image](
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(47).png)
+for perfect 0.9 WIDTH(P) SHOULD BE =>3 >> best noise margin
 
+## 2.2 noise margin 
+to define noise margin let's find 'VIL' & 'VIH' 
+for that first i define the "gain=1" region.
 
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(50).png)
 
+GAIN VS VOUT
+
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(52).png)
+
+VIL(INPUT LOW) > highest low input voltage FOR my inverter is 0.743V
+VLH(INPUT HIGH) >lowest high input voltage for my inverter is 0.980V
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(54).png)
+
+## 2.3 delay analysis 
+for delay analysis "transient" analysis is needed.
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(56).png)
+to reduce delay there are some techniques:
+                                   > Reduce power supply
+                                   > Reduce load capacitance 
+                                   >increase width
+
+exactly -> delay = propagation delay + rise/fall time delay 
+1. propagation delay
+  Time for input change to be reflected on output OR  time needed for 50% of i/p value to 50% of o/p value -> 'Tphl' & 'Tplh'
+ ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(58).png)![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(59).png)
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(60).png)
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(61).png)
+[image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(62).png)
