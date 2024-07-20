@@ -51,6 +51,11 @@ HERE IS IT :
 > Also add voltage sources "vin" "vdd", and code-window.
 
 HERE IS IT :
-![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(44).png)
-
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(55).png)
+---
+## 2. Analysis of INVERTER models
+as I created the testbench file, now it's time  for analysis of the schematic
+ > First I create a spice netlist.
+> ![image]
+> , after a successful netlist generate a simulation.
 
