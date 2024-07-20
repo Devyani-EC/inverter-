@@ -32,11 +32,19 @@ Key Skills Demonstrated :
 HERE IS THE IMAGE:
 ![image](https://github.com/Devyani-EC/inverter-/blob/main/Screenshot%20(41).png)
 ---
-## symbol
+## 1.1 symbol
 > Now I create a symbol file by pressing "A" on the keyboard, in that file I create a visual representation of the inverter.
 
   #IMPORTANCE:
-> This is important as in the hierarchical development we did have to create an inverter from scratch we can simply add its symbol.
-> it is also important for representation purpose.
+> This is important as in the hierarchical development we did have to create an inverter from scratch we can simply add its symbol. 
+> It is also important for representation purposes.
 HERE IS IT :
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(42).png)
+
+## 1.2 testbench
+> Now I create a new testbench file "inverter_test"
+> In this I added a symbol that I just created.
+> Also add voltage sources "vin" "vdd", and code-window.
+
+HERE IS IT :
+![image]
