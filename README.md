@@ -26,36 +26,53 @@ Key Skills Demonstrated :
 - [3. layout](#2-layout)
 ---
 ## 1. schematic 
->My project starts with a schematic.		
->>I take nfet_01v8 and pfet_01v8 and connect their gate, drain, and source with i/p & o/p pins,name pins correctly.
+My project starts with a schematic.		
+I take nfet_01v8 and pfet_01v8 and connect their gate, drain, and source with i/p & o/p pins,name pins correctly.
 
 HERE IS THE IMAGE:
 ![image](https://github.com/Devyani-EC/inverter-/blob/main/Screenshot%20(41).png)
 ---
 ## 1.1 symbol
-> Now I create a symbol file by pressing "A" on the keyboard, in that file I create a visual representation of the inverter.
+ Now I create a symbol file by pressing "A" on the keyboard, in that file I create a visual representation of the inverter.
 >
->  #IMPORTANCE:
-> This is important as in the hierarchical development we did have to create an inverter from scratch we can simply add its symbol.
-> It is also important for representation purposes.
+  #IMPORTANCE:
+ This is important as in the parent hierarchical development we did have to create an inverter from scratch we can simply add its symbol.
+>
+It is also important for representation purposes.
 
 
 HERE IS IT :
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(42).png)
 
 ## 1.2 testbench
-> Now I create a new testbench file "inverter_test"
+>
+ Now I create a new testbench file "inverter_test"
 > 
-> In this I added a symbol that I just created.
+ In this, I added a symbol that I just created.
 > 
-> Also add voltage sources "vin" "vdd", and code-window.
+Also add voltage sources "vin" "vdd", and code-window.
 
 HERE IS IT :
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(55).png)
 ---
 ## 2. Analysis of INVERTER models
 as I created the testbench file, now it's time  for analysis of the schematic
- > First I create a spice netlist.
-> ![image]
-> , after a successful netlist generate a simulation.
+First I create a spice netlist.
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(45).png)
+
+After a successful netlist generate a simulation.
+Simulation should appear errorless.
+   1. by using the >display> command we can see the plots there available.
+
+## 2.1 General VTC analysis
+##Q.why vtc analysis? 
+  >>> From vtc we can tell whether the inverter is strong p or n, it is useful in "noise analysis".
+
+here I do "dc" simulation. 
+first I calculate the ##"VM" point in the vin vs vout graph.
+here vdd is 1.8 which is max, therefore vm should be 0.9. if there is too much deviation, in that case, we face a noise margin effect.
+![image](
+
+
+
 
