@@ -28,3 +28,4 @@ Key Skills Demonstrated :
 ##schematic 
  > My project starts with a schematic.
 >I take nfet_01v8 and pfet_01v8 and connect their gate, drain, and source with i/p & o/p pins,name pins correctly.
+> ![image]
