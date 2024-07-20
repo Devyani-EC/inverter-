@@ -66,13 +66,16 @@ Simulation should appear errorless.
 
 ## 2.1 General VTC analysis
 ##Q.why vtc analysis? 
-  >>> From vtc we can tell whether the inverter is strong p or n, it is useful in "noise analysis".
+  --- From vtc we can tell whether the inverter is strong p or n, it is useful in "noise analysis".
 
 here I do "dc" simulation. 
-first I calculate the ##"VM" point in the vin vs vout graph.
-here vdd is 1.8 which is max, therefore vm should be 0.9. if there is too much deviation, in that case, we face a noise margin effect.
-![image](
 
+first I calculate the "##VM" point in the vin vs vout graph.
+
+here vdd is 1.8 which is max, therefore vm should be 0.9. if there is too much deviation, in that case, we face a noise margin effect.
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(49).png)
+
+now I am proving the theory of "VM" THAT if I increase "VM" then the graph should shift right.
 
 
 
