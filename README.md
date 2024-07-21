@@ -16,7 +16,7 @@ Key Skills Demonstrated :
 ---
 
 #Project Structure:
- - [1. schematic](#1-schematic)
+- [1. schematic](#1-schematic)
   - [1.1 symbol](#11-symbol)
   - [1.2 testbench](#12-testbench)
 - [2. Analysis of INVERTER models](#2-Analysis-of-INVERTER-models)
@@ -137,8 +137,35 @@ Here we include 0.5p F of capacitance
  ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(71).png)
  now take a look at a graph of vout vs vin.  
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(72).png)  
+3. increase the width of inverter 
 here is the delay calculation: here width of pfet & nfet is 4 & 2.
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(76).png)
-
+here I make the width again normal pfet & nfet is 2 & 1.
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(77).png)
+#### now in the loaded cap we can see the significance of width on tr & tf.
 
+## 2.4  Power analysis :
+
+      P = V * I
+here I have two voltage sources vin & vdd. 
+    >>> Vin might provide current but it is femto or pico ampere (A). we can neglect it  :
+
+      Pvin = 0
+I am focusing on this  formula of power :
+![image](https://github.com/user-attachments/assets/c2e24337-e20a-4249-8755-627def338162)
+
+to know Pvdd, I look at the current because of vdd.
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(78).png)
+
+**plot** **current** **vs** **vout**: in this graph, we can see the significance of different component power :
+
+     dynamic power
+     static power
+here we can appreciate the concept of leakage-current.
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(79).png)
+
+now I calculate power for 1 clock cycle.
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(80).png)
+---
+# 3. layout
+I use magic tool for layout and I am able to make layout without any DRC.
