@@ -15,16 +15,16 @@ Key Skills Demonstrated :
    3. Propagation delay and rise-time & fall-time delay analysis
 ---
 
-#Project Structure:
+## Project Structure:
 - [1. schematic](#1-schematic)
   - [1.1 symbol](#11-symbol)
   - [1.2 testbench](#12-testbench)
 - [2. Analysis of INVERTER models](#2-Analysis-of-INVERTER-models)
   - [2.1 General VTC analysis](#21-General-VTC-analysis)
   - [2.2 noise margin ](#22-noise-margin)
-  - [2.3 delay analysis ](#22-delay-analysis)
-  - [2.4 Power analysis](#23-power-analysis)
-- [3. layout](#2-layout)
+  - [2.3 delay analysis ](#23-delay-analysis)
+  - [2.4 Power analysis](#24-power-analysis)
+- [3. layout](#3-layout)
 ---
 ## 1. schematic 
 >
@@ -55,7 +55,8 @@ Also add voltage sources "vin" "vdd", and code-window.
 **Here is it:**   
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(55).png)
 ---
-## 2. Analysis of INVERTER models
+---
+## 2.Analysis of INVERTER models
 as I created the testbench file, now it's time  for analysis of the schematic
 First I create a spice netlist.
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(45).png)
@@ -79,8 +80,8 @@ now I am proving the theory of "VM" THAT if I increase "VM" then the graph shoul
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(47).png)
 for perfect 0.9 WIDTH(P) SHOULD BE =>3 >> best noise margin
 
-## 2.2 noise margin 
-FOR NOISE MARGIN : I split the output(vout) wave into three parts by using the concept of gain   
+### 2.2 noise margin 
+FOR NOISE MARGIN: I split the output(vout) wave into three parts by using the concept of gain   
 gain = dvout/dvin .    
  first, i get the "gain=1" region.  
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(50).png)
@@ -93,7 +94,7 @@ VIL(INPUT LOW) > The highest low input voltage FOR my inverter is 0.743V
 VLH(INPUT HIGH) >lowest high input voltage for my inverter is 0.980V
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(54).png)
 
-## 2.3 Delay analysis 
+### 2.3 Delay analysis 
 for delay analysis "transient" analysis is needed.
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(56).png)  
 
@@ -125,12 +126,15 @@ to reduce delay there are some techniques:
    the rise time(tr) delay & fall time(tf) delay :
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(81).png)   
 
+
 1. increase power  >> Here I already give the maximum voltage 1.8v so, now I reduce it to 1v   
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(65).png)   
 
+ 
 3. increase the width of inverter  >> pfet--- 2 to 4 & nfet--- 1 to 2
-![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(84).png)
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(84).png)  
 as we can see here there is  not much change in tr & tf because is ratio of width remains the same at 2:1 so there is no effect on unloaded capacitance. c increases with width.
+
         
 #### 2. Loaded capacitance 
 Here we include 0.5p F of capacitance   
@@ -139,9 +143,9 @@ Here we include 0.5p F of capacitance
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(72).png)  
 3. increase the width of inverter 
 here is the delay calculation: here width of pfet & nfet is 4 & 2.
-![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(76).png)
-here I make the width again normal pfet & nfet is 2 & 1.
-![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(77).png)
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(76).png)  
+here I make the width again normal pfet & nfet is 2 & 1.  
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(77).png)  
 #### now in the loaded cap we can see the significance of width on tr & tf.
 
 ## 2.4  Power analysis :
@@ -167,6 +171,7 @@ here we can appreciate the concept of leakage-current.
 now I calculate power for 1 clock cycle.
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(80).png)
 ---
+---
 # 3. layout
 I use a magic tool for layout and I can make a layout without any DRC.
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(90).png)
@@ -174,3 +179,17 @@ I use a magic tool for layout and I can make a layout without any DRC.
 after that, I create a spice netlist file and edit it for transient analysis  
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(89).png)
 
+after that, i do the last step >> **LVs**
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(88).png)
+---
+---
+#### Key Findings:
+   power consumption and propagation delay.
+
+#### Challenges and Solutions:  
+   During the simulation, an unexpected voltage spike was observed. This was traced to a parasitic capacitance in the layout, which was subsequently addressed through layout optimization techniques. also, I faced so many technical issues with the tools by solving them I understood the functionality of tools more thoroughly.
+
+#### Skills Demonstrated: 
+   This project allowed me to hone my proficiency in schematic capture with X, layout design using Magic, and circuit simulation with Spice. I also gained valuable experience in design analysis and troubleshooting.
+
+---
