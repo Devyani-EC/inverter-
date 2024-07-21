@@ -140,3 +140,5 @@ Here we include 0.5p F of capacitance
 here is the delay calculation: here width of pfet & nfet is 4 & 2.
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(76).png)
 
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(77).png)
+
