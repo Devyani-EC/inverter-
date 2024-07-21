@@ -168,4 +168,9 @@ now I calculate power for 1 clock cycle.
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(80).png)
 ---
 # 3. layout
-I use magic tool for layout and I am able to make layout without any DRC.
+I use a magic tool for layout and I can make a layout without any DRC.
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(90).png)
+
+after that, I create a spice netlist file and edit it for transient analysis  
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(89).png)
+
