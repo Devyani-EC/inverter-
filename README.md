@@ -121,12 +121,14 @@ to reduce delay there are some techniques:
                                                                                                     
          1. unloaded capacitance
          2. loaded capacitance 
+#### 1. unloaded capacitance 
+   the rise time delay & fall time delay :
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(81).png)   
 
-![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(81).png) 
+1. increase power  >> Here I already give the maximum voltage 1.8v so, now I reduce it to 1v   
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(65).png)   
 
-1. increase power  >> Here I already give the maximum voltage 1.8v so, now I reduce it to 1v
-
-
+3. increase the width of inverter  >> pfet--- 2 to 4 & nfet--- 1 to 2  
         
 
 
