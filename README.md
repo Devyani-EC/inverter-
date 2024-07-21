@@ -122,13 +122,21 @@ to reduce delay there are some techniques:
          1. unloaded capacitance
          2. loaded capacitance 
 #### 1. unloaded capacitance 
-   the rise time delay & fall time delay :
+   the rise time(tr) delay & fall time(tf) delay :
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(81).png)   
 
 1. increase power  >> Here I already give the maximum voltage 1.8v so, now I reduce it to 1v   
 ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(65).png)   
 
-3. increase the width of inverter  >> pfet--- 2 to 4 & nfet--- 1 to 2  
+3. increase the width of inverter  >> pfet--- 2 to 4 & nfet--- 1 to 2
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(84).png)
+as we can see here there is  not much change in tr & tf because is ratio of width remains the same at 2:1 so there is no effect on unloaded capacitance. c increases with width.
         
-
+#### 2. Loaded capacitance 
+Here we include 0.5p F of capacitance   
+ ![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(71).png)
+ now take a look at a graph of vout vs vin.  
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(72).png)  
+here is the delay calculation: here width of pfet & nfet is 4 & 2.
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(76).png)
 
