@@ -122,10 +122,11 @@ to reduce delay there are some techniques:
          1. unloaded capacitance
          2. loaded capacitance 
 
+![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(81).png) 
 
 1. increase power  >> Here I already give the maximum voltage 1.8v so, now I reduce it to 1v
 
-![image](https://github.com/Devyani-EC/inverter-/blob/new-branch/images1/Screenshot%20(82).png)  
+
         
 
 
