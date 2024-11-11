@@ -1,0 +1,54 @@
+
+module tb_cpu_msp;
+    reg clk1;
+    reg clk2;
+cpu_msp uut (
+      .clk1(clk1),
+      .clk2(clk2)
+   );
+
+    initial begin
+        clk1 = 0;
+        clk2 = 0;
+        forever begin #5 clk1 = ~clk1; 
+        #5 clk2 = ~clk2; 
+               end
+           end   
+    initial begin
+      uut.PC = 19'b0;
+      uut.SP = 4'b1111; // Initialize stack pointer
+      uut.HALTED = 0;
+      uut.data_Mem[0] = 32'h00000002;
+      uut.data_Mem[1] = 32'h00000000;
+      uut.data_Mem[2] = 32'h00000000;
+      uut.Reg[0] = 32'h00000001;
+      uut.Reg[1] = 32'h00000001; 
+      uut.Reg[4] = 32'h00000001;  
+      uut.Reg[2] = 32'h00000001;
+      uut.Reg[3] = 32'h00000001;
+      uut.Reg[5] = 32'h00000004; 
+      uut.Reg[6] = 32'h00000002;
+      uut.Reg[7] = 32'h00000002;
+      uut.inst_Mem[10] = {5'b01011, 4'b0001, 4'b0010, 4'b0001,2'b00};
+      uut.inst_Mem[9] = {5'b10011, 4'b0000, 4'b0100, 4'b0000,2'b01}; 
+      uut.inst_Mem[15] = {5'b01110, 4'b0000, 4'b0010, 4'b0100,2'b00}; 
+      uut.inst_Mem[14] = {5'b00011, 4'b0101, 4'b0101, 4'b0110,2'b00};
+      uut.inst_Mem[8] = {5'b01101, 4'b0000, 4'b0011, 4'b1000,2'b00}; 
+      uut.inst_Mem[0] = {5'b00000, 4'b0010, 4'b0011,4'b0001,2'b00};
+      uut.inst_Mem[4] = {5'b00110, 4'b0101, 4'b0101, 4'b0110, 2'b00};
+      uut.inst_Mem[5] = {5'b00001, 4'b0010, 4'b0011,4'b0001,2'b00};
+      uut.inst_Mem[6] = {5'b00111, 14'b0}; // HLT (Halt instruction
+      uut.inst_Mem[1] = {5'b10010, 5'b00000, 2'b01, 5'b00000,2'b00};
+      uut.inst_Mem[7]={19'b00100_0000_0000_0000_00};
+      uut.inst_Mem[2] = {5'b10001, 5'b00000,  5'b00010,4'b0001};
+      uut.inst_Mem[3] = {5'b00000, 14'b0};
+      uut.inst_Mem[14] = {5'b00000, 14'b0};
+      uut.inst_Mem[11]={19'b01010_0000_0011_0100_00};
+      uut.inst_Mem[13]={19'b11111_0000_0000_0000_00};
+     // Wait for a few clock cycles to execute the program
+      #20;
+      $dumpfile("dump.vcd");
+      $dumpvars ("");
+      # 400$finish;
+    end
+      endmodule
